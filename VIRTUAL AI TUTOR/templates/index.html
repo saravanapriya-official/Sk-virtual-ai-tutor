@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual AI Tutor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1>SK Virtual AI Tutor</h1>
+            <p class="subtitle">Your Personal Learning Assistant</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Syllabus Section -->
+        <section class="section syllabus-section">
+            <div class="section-header">
+                <h2>Syllabus</h2>
+            </div>
+            <div class="syllabus-content">
+                <!-- Unit I -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <h3>Unit I: INTRODUCTION TO AI</h3>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="unit-content">
+                        <ul class="topic-list">
+                            <li>Introduction to AI</li>
+                            <li>Agents and Environments</li>
+                            <li>Nature of Environments</li>
+                            <li>Structure of Agents</li>
+                            <li>Problem Solving Agents</li>
+                            <li>Defining the Problem as a State Space Search</li>
+                            <li>Problem Characteristics</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Unit II -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <h3>Unit II: SEARCH STRATEGIES</h3>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="unit-content">
+                        <ul class="topic-list">
+                            <li>Search Algorithms</li>
+                            <li>Uninformed Search Strategies</li>
+                            <li>Informed Search Strategies</li>
+                            <li>Heuristic Functions</li>
+                            <li>Local Search and Optimization Problems</li>
+                            <li>Local Search in Continuous Space</li>
+                            <li>Search with Non-Deterministic Actions</li>
+                            <li>Search in Partially Observable Environments</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Unit III -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <h3>Unit III: GAME PLAYING AND CSP</h3>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="unit-content">
+                        <ul class="topic-list">
+                            <li>Game Theory</li>
+                            <li>Optimal Decisions in Games</li>
+                            <li>Alpha-Beta Search</li>
+                            <li>Monte-Carlo Tree Search</li>
+                            <li>Stochastic Games</li>
+                            <li>Partially Observable Games</li>
+                            <li>Constraint Satisfaction Problems</li>
+                            <li>Constraint Propagation</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Unit IV -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <h3>Unit IV: LOGICAL REASONING</h3>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="unit-content">
+                        <ul class="topic-list">
+                            <li>Knowledge-Based Agents</li>
+                            <li>Propositional Logic</li>
+                            <li>Propositional Theorem Proving</li>
+                            <li>First-Order Logic</li>
+                            <li>Syntax and Semantics</li>
+                            <li>Knowledge Representation and Engineering</li>
+                            <li>Inferences in First-Order Logic</li>
+                            <li>Forward Chaining</li>
+                            <li>Backward Chaining</li>
+                            <li>Resolution</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Unit V -->
+                <div class="unit-item">
+                    <div class="unit-header">
+                        <h3>Unit V: PROBABILISTIC REASONING</h3>
+                        <span class="toggle-icon">▼</span>
+                    </div>
+                    <div class="unit-content">
+                        <ul class="topic-list">
+                            <li>Acting under Uncertainty</li>
+                            <li>Bayesian Inference</li>
+                            <li>Naïve Bayes Models</li>
+                            <li>Probabilistic Reasoning</li>
+                            <li>Bayesian Networks</li>
+                            <li>Exact Inference in Bayesian Networks</li>
+                            <li>Approximate Inference in Bayesian Networks</li>
+                            <li>Causal Networks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notes & PDF Section -->
+        <section class="section notes-section">
+            <div class="section-header">
+                <h2>Study Materials</h2>
+            </div>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="notes">Notes</button>
+                <button class="tab-button" data-tab="questions">Question Bank</button>
+            </div>
+            <div class="tab-content">
+                <div id="notes" class="tab-pane active">
+                    <div class="card">
+                        <h3>All Units Notes</h3>
+                        <p>Notes for all units will be uploaded soon. Stay tuned!</p>
+                        <button class="btn-view" disabled>View Notes</button>
+                    </div>
+                </div>
+
+                <div id="questions" class="tab-pane">
+                    <div class="card">
+                        <h3>Question Bank</h3>
+                        <p>Download the complete Question Bank PDF covering all units for thorough preparation.</p>
+                        <a href="{{ url_for('static', filename='pdf/QuestionBank-Final.pdf') }}" class="btn-view" download>Download PDF</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chat Section -->
+        <section class="section chat-section">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-header-content">
+                        <div class="avatar">AI</div>
+                        <div class="chat-title">
+                            <h3>AI Tutor</h3>
+                            <span class="status">Online</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            <p>Hello! I'm your Virtual AI Tutor. Ask me any questions about your coursework, and I'll help you understand the concepts better!</p>
+                            <span class="timestamp">Just now</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="typing-indicator" id="typingIndicator">
+                    <div class="typing-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input
+                        type="text"
+                        id="chatInput"
+                        class="chat-input"
+                        placeholder="Ask me any 2-mark or 13-mark question!"
+                        autocomplete="off"
+                    >
+                    <button id="sendButton" class="send-button">Send</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+async function sendMessage() {
+    const input = document.getElementById("userInput");
+    const message = input.value.trim();
+    if (!message) return;
+
+    const chatBox = document.getElementById("chatBox");
+    chatBox.innerHTML += `<p><strong>You:</strong> ${message}</p>`;
+    input.value = "";
+
+    const response = await fetch("/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question: message })
+    });
+
+    const data = await response.json();
+    chatBox.innerHTML += `<p><strong>Bot:</strong> ${data.answer}</p>`;
+}
+</script>
+<script>
+        // Example fetch request to get 2-mark questions from unit1
+        fetch('http://127.0.0.1:5000/get_question?unit=unit1&type=2-marks')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('questions');
+            data.forEach(q => {
+                const div = document.createElement('div');
+                div.innerHTML = `<b>Q:</b> ${q.question} <br> <b>A:</b> ${q.answer}<hr>`;
+                container.appendChild(div);
+            });
+        })
+        .catch(err => console.error("Error fetching questions:", err));
+    </script>
+
+</body>
+</html>

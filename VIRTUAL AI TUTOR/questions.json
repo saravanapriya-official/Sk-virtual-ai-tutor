@@ -1,0 +1,528 @@
+{
+  "unit1": {
+    "unit_name": "Introduction to AI",
+    "questions": [
+      {
+        "type": "2-marks",
+        "question": "State the definition of Artificial Intelligence.",
+        "answer": "Artificial Intelligence (AI) is the branch of computer science that aims to create machines capable of intelligent behavior, simulating human cognitive functions such as learning, reasoning, and problem-solving."
+      },
+      {
+        "type": "2-marks",
+        "question": "Name the elements of an agent.",
+        "answer": "The elements of an agent are: Sensors, Actuators, Agent Function, and Agent Program."
+      },
+      {
+        "type": "2-marks",
+        "question": "List down the characteristics of an intelligent agent.",
+        "answer": "Characteristics of an intelligent agent include: Reactivity, Pro-activeness, Social ability, Autonomy, Learning ability, and Flexibility."
+      },
+      {
+        "type": "2-marks",
+        "question": "How would you quote PEAS description? Give an example for automated taxi driver.",
+        "answer": "PEAS stands for Performance measure, Environment, Actuators, Sensors. Example for automated taxi driver: Performance: Minimize travel time, passenger safety; Environment: Roads, traffic, passengers; Actuators: Wheels, horn, accelerator, brakes; Sensors: Cameras, GPS, speedometer."
+      },
+      {
+        "type": "2-marks",
+        "question": "Define agents and agent functions.",
+        "answer": "An agent is anything that perceives its environment through sensors and acts upon it through actuators. The agent function maps any given percept sequence to an action."
+      },
+      {
+        "type": "2-marks",
+        "question": "Explain Task Environment.",
+        "answer": "Task environment describes the environment in which an agent operates and the tasks it needs to perform, including goals, performance measures, and relevant constraints."
+      },
+      {
+        "type": "2-marks",
+        "question": "Define problem-solving agents.",
+        "answer": "Problem-solving agents are agents that act to achieve specific goals by finding sequences of actions that lead to a solution."
+      },
+      {
+        "type": "2-marks",
+        "question": "Write the ways to formulate a problem.",
+        "answer": "To formulate a problem: Define initial state, possible actions, transition model, goal test, and path cost."
+      },
+      {
+        "type": "2-marks",
+        "question": "Discover the importance of optimal solution.",
+        "answer": "An optimal solution ensures that the agent achieves the best possible outcome according to the performance measure, often with minimum cost or maximum efficiency."
+      },
+      {
+        "type": "2-marks",
+        "question": "How to improve the effectiveness of search-based problem-solving techniques?",
+        "answer": "Effectiveness can be improved by using heuristics, reducing search space, using informed search strategies, and optimizing path costs."
+      },
+      {
+        "type": "13-marks",
+        "question": "Is AI a science or is it engineering? Explain. Describe the future of AI.",
+        "answer": "AI is both a science and engineering discipline. As a science, it studies intelligence and develops theories. As engineering, it builds intelligent systems. The future of AI includes autonomous systems, smarter healthcare, advanced robotics, and improved decision-making across industries."
+      },
+      {
+        "type": "13-marks",
+        "question": "List the four categories of AI in detail. Explain the properties of task environment.",
+        "answer": "Categories of AI: \n1. Reactive Machines\n2. Limited Memory\n3. Theory of Mind\n4. Self-aware AI\n\nProperties of task environment include observability, determinism, episodic/sequential nature, static/dynamic, discrete/continuous."
+      },
+      {
+        "type": "13-marks",
+        "question": "Define agents. Specify PEAS descriptions for intelligent agent design with examples and explain basic types of agents.",
+        "answer": "An agent perceives and acts in an environment. PEAS: Performance measure, Environment, Actuators, Sensors. Example: Chess-playing agent: Performance=max wins, Environment=Chessboard, Actuators=Move pieces, Sensors=View board. Types of agents: Simple reflex, Model-based, Goal-based, Utility-based, Learning."
+      },
+      {
+        "type": "13-marks",
+        "question": "Explain the structure of different intelligence agents and how these agents are converted to learning agents.",
+        "answer": "Structure: Agents have sensors, actuators, agent function, and program. Conversion to learning agents adds learning component to improve performance over time using feedback from environment and experiences."
+      },
+      {
+        "type": "13-marks",
+        "question": "For each of the following agents, develop a PEAS description of the task environment: Robot Soccer Player, Internet Book Shopping Agent, Autonomous Mars Rover, Mathematician's Theorem Proving Assistant.",
+        "answer": "1. Robot Soccer Player: Performance=Score goals, Environment=Soccer field, Actuators=Legs, Sensors=Cameras\n2. Internet Book Shopping Agent: Performance=Fast, accurate book delivery, Environment=Internet, Actuators=Send requests, Sensors=Web data\n3. Autonomous Mars Rover: Performance=Explore and gather data, Environment=Mars terrain, Actuators=Wheels, robotic arm, Sensors=Cameras, instruments\n4. Mathematician’s Theorem Proving Assistant: Performance=Correct proofs, Environment=Mathematical problems, Actuators=Output proofs, Sensors=Input problem"
+      },
+      {
+        "type": "13-marks",
+        "question": "Illustrate on problem formulation for Toy and Real-world problems with examples.",
+        "answer": "Toy problem: 8-puzzle problem; Initial state, goal state, moves are easy to define.\nReal-world problem: Autonomous driving; Environment complex, partially observable, dynamic, and has multiple goals like safety and speed."
+      },
+      {
+        "type": "15-marks",
+        "question": "List the characteristics of Artificial Intelligence. List any five characteristics in detail.",
+        "answer": "Characteristics: 1. Learning ability, 2. Reasoning ability, 3. Problem-solving, 4. Adaptability, 5. Autonomy. Detailed: AI can learn from data, reason logically, solve problems efficiently, adapt to changing environments, and operate autonomously without constant human intervention."
+      },
+      {
+        "type": "15-marks",
+        "question": "Briefly describe the components of problem definition with an example. Explain in detail the concept of Rationality.",
+        "answer": "Components: Initial state, actions, transition model, goal test, path cost. Example: Maze-solving agent.\nRationality: Rational agent chooses actions that maximize expected performance measure given its knowledge."
+      },
+      {
+        "type": "15-marks",
+        "question": "State the characteristics of a problem. Discuss the concept of searching for solutions.",
+        "answer": "Problem characteristics: Well-defined initial and goal state, actions, transition model, path cost. Searching: Process of exploring possible actions to reach the goal using search strategies like BFS, DFS, heuristic search."
+      },
+      {
+        "type": "15-marks",
+        "question": "Define a problem and its components. Explain how a problem-solving agent works.",
+        "answer": "Problem: A task defined by initial state, goal, actions, transition model, and path cost. Problem-solving agent: perceives environment, formulates problem, searches through states to find solution, executes actions to reach goal."
+      }
+    ]
+  },
+  "unit2": {
+    "unit_name": "Problem Solving",
+    "questions": [
+      {
+        "type": "2-marks",
+        "question": "What is heuristic search?",
+        "answer": "Heuristic search is a problem-solving method that uses heuristic functions to estimate the best path or solution, guiding the search efficiently towards the goal."
+      },
+      {
+        "type": "2-marks",
+        "question": "Differentiate Informed & Uninformed search. Give examples.",
+        "answer": "Informed search uses additional knowledge about the problem (heuristics) to guide the search, e.g., A* search. Uninformed search does not use problem-specific knowledge and explores the search space blindly, e.g., Breadth-First Search."
+      },
+      {
+        "type": "2-marks",
+        "question": "What do you infer from hill-climbing search algorithm?",
+        "answer": "Hill-climbing is a local search algorithm that continuously moves in the direction of increasing value (or heuristic) to find a peak or optimal solution, but may get stuck in local maxima."
+      },
+      {
+        "type": "2-marks",
+        "question": "Point out the purpose of online search agent in unknown environment?",
+        "answer": "An online search agent acts in real-time without prior knowledge of the environment, making decisions and learning about the environment as it explores."
+      },
+      {
+        "type": "2-marks",
+        "question": "How the search technique is made efficient in continuous space?",
+        "answer": "Efficiency in continuous space is achieved using techniques like gradient ascent/descent, local search, or simulated annealing to navigate the space without exhaustive search."
+      },
+      {
+        "type": "2-marks",
+        "question": "List the performance measures of search strategies.",
+        "answer": "Performance measures include completeness, optimality, time complexity, and space complexity."
+      },
+      {
+        "type": "2-marks",
+        "question": "What is the advantage of heuristic function?",
+        "answer": "Heuristic functions guide the search towards promising paths, reducing the number of explored states and improving efficiency."
+      },
+      {
+        "type": "2-marks",
+        "question": "Generalize and define the effect of heuristic accuracy on performance.",
+        "answer": "Accurate heuristics improve search efficiency and solution quality. Inaccurate heuristics can misguide the search and increase computation."
+      },
+      {
+        "type": "2-marks",
+        "question": "Why problem formulation must follow goal formulation?",
+        "answer": "Problem formulation defines the states, actions, and objectives based on the goal; without a clear goal, problem solving cannot be structured effectively."
+      },
+      {
+        "type": "2-marks",
+        "question": "Show the significance of using heuristic functions.",
+        "answer": "Heuristic functions estimate the cost to reach the goal, improving search speed and reducing the number of explored paths."
+      },
+      {
+        "type": "13-marks",
+        "question": "Explain heuristic informed search strategies with an example.",
+        "answer": "Heuristic informed search uses domain knowledge to evaluate which paths to explore first. Example: A* search uses f(n) = g(n) + h(n) to choose the optimal path efficiently."
+      },
+      {
+        "type": "13-marks",
+        "question": "What is uninformed search and explain the different types of uninformed search strategies.",
+        "answer": "Uninformed search explores the search space without domain knowledge. Types: Breadth-First Search, Depth-First Search, Uniform Cost Search, Iterative Deepening Search."
+      },
+      {
+        "type": "13-marks",
+        "question": "Sketch with an example, what is the need of online search agents and unknown environments.",
+        "answer": "Online search agents interact with unknown environments, acting and learning simultaneously. Example: A robot exploring a maze without a map."
+      },
+      {
+        "type": "13-marks",
+        "question": "Describe the A* search and give the proof of optimality of A*.",
+        "answer": "A* search uses f(n) = g(n) + h(n) to find the least-cost path. If the heuristic h(n) is admissible (never overestimates), A* is guaranteed to find the optimal solution."
+      },
+      {
+        "type": "13-marks",
+        "question": "How an algorithm’s performance is evaluated? Compare different uninformed search strategies in terms of the four evaluation criteria.",
+        "answer": "Performance is evaluated by completeness, optimality, time complexity, and space complexity. BFS is complete and optimal, DFS is not optimal, UCS is optimal and complete, IDS is complete and uses less memory."
+      },
+      {
+        "type": "13-marks",
+        "question": "Elaborate the following local search strategies with examples: Genetic Algorithms, Simulated Annealing, Local Beam Search.",
+        "answer": "Genetic Algorithms use population-based search with crossover and mutation. Simulated Annealing probabilistically accepts worse moves to escape local maxima. Local Beam Search keeps k states at each step and selects successors from them."
+      },
+      {
+        "type": "15-marks",
+        "question": "Illustrate about the search with nondeterministic actions and in partially observable environment.",
+        "answer": "In nondeterministic actions, outcomes are not guaranteed, so search must consider multiple possibilities. Partially observable environments require agents to maintain beliefs or use sensors to estimate the state."
+      },
+      {
+        "type": "15-marks",
+        "question": "Sketch with an example, what is the need of online search agents in unknown environment.",
+        "answer": "Online agents act in unknown environments by perceiving the state and taking actions without a complete model. Example: Robot vacuum navigating a new house layout."
+      },
+      {
+        "type": "15-marks",
+        "question": "Briefly explain the following: i) Local search in continuous space ii) Search with non-deterministic actions.",
+        "answer": "i) Local search in continuous space uses methods like gradient ascent/descent. ii) Search with nondeterministic actions requires considering all possible outcomes and planning accordingly."
+      },
+      {
+        "type": "15-marks",
+        "question": "Elaborate on search in partially observable environment.",
+        "answer": "In partially observable environments, agents maintain a belief state to represent possible current states and update it based on observations to make decisions."
+      }
+
+    ]
+  },
+  "unit3": {
+    "unit_name": "Game Playing and CSP",
+    "questions": [
+      {
+        "type": "2-marks",
+        "question": "State optimal decision in game.",
+        "answer": "Optimal decisions in a game are choices that maximize a player's expected utility, considering the possible moves of opponents."
+      },
+      {
+        "type": "2-marks",
+        "question": "Explain the classification of CSP with respect to constraints.",
+        "answer": "CSPs are classified based on constraints into: Unary constraints, Binary constraints, and Higher-order constraints."
+      },
+      {
+        "type": "2-marks",
+        "question": "Define node consistency.",
+        "answer": "Node consistency ensures that each value in a variable's domain satisfies the variable's unary constraints."
+      },
+      {
+        "type": "2-marks",
+        "question": "Which algorithm is used in the game to make decisions?",
+        "answer": "The Minimax algorithm is commonly used for decision-making in games."
+      },
+      {
+        "type": "2-marks",
+        "question": "How tree decomposition is achieved?",
+        "answer": "Tree decomposition breaks a graph into a tree of clusters (nodes) to simplify solving CSPs, ensuring local consistency within clusters."
+      },
+      {
+        "type": "2-marks",
+        "question": "Give the example for game playing problems.",
+        "answer": "Examples include Tic-Tac-Toe, Chess, and Checkers."
+      },
+      {
+        "type": "2-marks",
+        "question": "Define conflict-directed backjumping.",
+        "answer": "Conflict-directed backjumping is a backtracking optimization that jumps back to the variable causing a conflict rather than the previous variable."
+      },
+      {
+        "type": "2-marks",
+        "question": "What is cycle cutset?",
+        "answer": "A cycle cutset is a set of variables which, when removed, leaves the constraint graph as a tree, simplifying CSP solving."
+      },
+      {
+        "type": "2-marks",
+        "question": "Define Alpha-Beta pruning.",
+        "answer": "Alpha-Beta pruning is an optimization technique for Minimax that eliminates branches that cannot affect the final decision."
+      },
+      {
+        "type": "2-marks",
+        "question": "What is stochastic games?",
+        "answer": "Stochastic games are games where outcomes are partly random and partly under the control of players."
+      },
+      {
+        "type": "13-marks",
+        "question": "Explain Mini-max algorithms and how it works for game of Tic-Tac-Toe.",
+        "answer": "The Mini-max algorithm evaluates possible moves for both players in a game tree. For Tic-Tac-Toe, it simulates all possible moves, assigns scores for win/loss/draw, and chooses the move that maximizes the player's minimum gain."
+      },
+      {
+        "type": "13-marks",
+        "question": "Explain significance of pruning system and elaborate Game playing with Alpha-Beta Pruning and its Algorithm.",
+        "answer": "Pruning reduces the number of nodes evaluated in a game tree, improving efficiency. Alpha-Beta pruning skips branches that cannot influence the final decision. The algorithm keeps track of alpha (best score for maximizing player) and beta (best score for minimizing player) values to prune irrelevant branches."
+      },
+      {
+        "type": "13-marks",
+        "question": "How do you take optimal decisions in single player and multiplayer games? Describe in detail.",
+        "answer": "In single-player games, optimal decisions are made using search techniques like Minimax or heuristic search. In multiplayer games, players consider opponent strategies using game trees and select moves that maximize expected payoff considering others' actions."
+      },
+      {
+        "type": "13-marks",
+        "question": "Write a simple backtracking algorithm for constraint satisfaction problems.",
+        "answer": "Backtracking algorithm systematically assigns values to variables, checks constraints, and backtracks when a constraint is violated to explore alternative assignments until a solution is found."
+      },
+      {
+        "type": "13-marks",
+        "question": "Elaborate on backtracking search and Local search of CSP with algorithm.",
+        "answer": "Backtracking search assigns values sequentially and backtracks on conflicts. Local search starts with a complete assignment and iteratively improves it by reducing conflicts using heuristics like Min-Conflicts."
+      },
+      {
+        "type": "13-marks",
+        "question": "What is partially observable game and explain with an example.",
+        "answer": "A partially observable game is one where a player has incomplete knowledge of the game state. Example: Poker, where players cannot see opponents' cards."
+      },
+      {
+        "type": "15-marks",
+        "question": "Define constraint satisfaction problem (CSP). How CSP is formulated as a search problem? Explain with an example.",
+        "answer": "CSP consists of variables, domains, and constraints. Formulated as a search problem, each state represents a partial assignment, actions assign values, and solution satisfies all constraints. Example: Map coloring problem."
+      },
+      {
+        "type": "15-marks",
+        "question": "Explain with examples: (i) Constraint graph (ii) Crypt arithmetic problem (iii) Adversarial search problem.",
+        "answer": "Constraint graph represents variables as nodes and constraints as edges. Crypt arithmetic problem involves solving puzzles where letters represent digits. Adversarial search problem is a game scenario where players compete to maximize their gain, e.g., Chess."
+      },
+      {
+        "type": "15-marks",
+        "question": "Discuss on stochastic games and Monte Carlo tree search algorithms with example in detail.",
+        "answer": "Stochastic games include randomness and strategic player decisions. Monte Carlo Tree Search evaluates moves by simulating random playouts and choosing moves with highest win rates. Example: Go game AI uses MCTS to decide moves."
+      },
+      {
+        "type": "15-marks",
+        "question": "Sketch the structure of problem using CSP. Is the problem structure influence on the solving technique?",
+        "answer": "CSP problem structure (tree, cyclic, or independent subproblems) affects the choice of solving techniques. Tree-structured CSPs can be solved efficiently, while cyclic structures may need backtracking or heuristics."
+      }
+    ]
+  },
+  "unit4": {
+    "unit_name": "Logical Reasoning",
+    "questions": [
+      {
+        "type": "2-marks",
+        "question": "Explain three levels of knowledge-based agent with an example.",
+        "answer": "Knowledge-based agents have: 1. Knowledge level – stores facts and rules; 2. Inference level – derives new knowledge; 3. Execution level – acts in the environment. Example: Chess-playing agent uses rules to decide next move."
+      },
+      {
+        "type": "2-marks",
+        "question": "What is entailment?",
+        "answer": "Entailment is a relationship between sentences where a sentence logically follows from one or more sentences."
+      },
+       {
+        "type": "2-marks",
+        "question": "Define inference.",
+        "answer": "Inference is the process of deriving new facts or conclusions from known facts or premises using logical rules."
+      },
+      {
+        "type": "2-marks",
+        "question": "List some of the rules of inference.",
+        "answer": "Common rules: Modus Ponens, Modus Tollens, Disjunctive Syllogism, Hypothetical Syllogism, Conjunction, Simplification, Resolution."
+      },
+      {
+        "type": "2-marks",
+        "question": "Convert the following into Horn clauses.",
+        "answer": "Horn clauses are a special form of clauses with at most one positive literal; conversion depends on the given sentences."
+      },
+      {
+        "type": "2-marks",
+        "question": "Write the following in predicate logic: For all x and y if x is a parent of y then y is a child of x.",
+        "answer": "∀x ∀y (Parent(x,y) → Child(y,x))"
+      },
+      {
+        "type": "2-marks",
+        "question": "For the given sentence “All Pompeiains were Romans” write a well-formed formula in predicate logic.",
+        "answer": "∀x (Pompeian(x) → Roman(x))"
+      },
+      {
+        "type": "2-marks",
+        "question": "What is clausal form? How is it useful?",
+        "answer": "Clausal form is a way of representing logical sentences as conjunctions of disjunctions of literals. It is useful for applying resolution in automated reasoning."
+      },
+      {
+        "type": "2-marks",
+        "question": "State generalized modus ponens.",
+        "answer": "Generalized Modus Ponens allows inference in first-order logic: if premises and implications are true, conclusion can be deduced."
+      },
+      {
+        "type": "2-marks",
+        "question": "What is the need of arc consistency?",
+        "answer": "Arc consistency ensures that for every value of a variable, there exists a consistent value in connected variables, reducing CSP search space."
+      },
+      {
+        "type": "13-marks",
+        "question": "Elaborate about Forward chaining and Backward chaining with an example.",
+        "answer": "Forward chaining starts from known facts and applies inference rules to derive new facts until goal is reached. Backward chaining starts from the goal and works backward using rules to find supporting facts. Example: Expert system for medical diagnosis."
+      },
+      {
+        "type": "13-marks",
+        "question": "Describe the steps involved in the knowledge engineering process with example.",
+        "answer": "Steps: Knowledge acquisition, representation, validation, reasoning, and system implementation. Example: Building a medical expert system."
+      },
+      {
+        "type": "13-marks",
+        "question": "Describe a procedure for converting a sentence to CNF with an example.",
+        "answer": "Procedure: Eliminate biconditionals/implications, move NOT inwards, standardize variables, skolemize, drop universal quantifiers, distribute OR over AND. Example: Convert (P→Q)→R to CNF."
+      },
+      {
+        "type": "13-marks",
+        "question": "Write short notes on Unification algorithm with example.",
+        "answer": "Unification algorithm finds a substitution that makes two logical expressions identical. Example: Unifying P(x,f(y)) and P(z,f(a)) gives {x/z, y/a}."
+      },
+      {
+        "type": "13-marks",
+        "question": "Develop and illustrate the use of first-order logic to represent knowledge.",
+        "answer": "First-order logic represents objects, relations, and quantifiers. Example: Parent(x,y), ∀x ∀y (Parent(x,y) → Ancestor(x,y))"
+      },
+      {
+        "type": "13-marks",
+        "question": "Explain resolution in predicate logic with suitable example.",
+        "answer": "Resolution is a rule of inference to derive contradictions and prove statements. Example: Using resolution to prove ¬P ∨ Q and P entails Q."
+      },
+      {
+        "type": "15-marks",
+        "question": "List out and explain each step to convert first order logic sentences to normal form. What is the use of doing that?",
+        "answer": "Steps: Eliminate implications, move NOT inwards, standardize variables, skolemize, drop universal quantifiers, distribute OR over AND. Use: Prepares sentences for resolution in automated reasoning."
+      },
+      {
+        "type": "15-marks",
+        "question": "Consider the following sentences and translate them into predicate form and convert to clause form: i) John likes all kinds of food ii) Apples are food iii) Chicken is food iv) Anything anyone eats and isn’t killed by is food v) Bill eats peanuts and is still alive vi) Sue eats everything Bill eats.",
+        "answer": "i) ∀x Food(x) → Likes(John,x), ii) Apple(x) → Food(x), iii) Chicken(x) → Food(x), iv) ∀x ∀y Eats(x,y) ∧ ¬Killed(x) → Food(y), v) Eats(Bill,Peanuts) ∧ Alive(Bill), vi) ∀x (Eats(Bill,x) → Eats(Sue,x))"
+      },
+      {
+        "type": "15-marks",
+        "question": "Define syntactic elements of First-Order logic and give resolution proof for example problem statement: (a) “West is a criminal” (b) “Curiosity killed the cat”.",
+        "answer": "Syntactic elements: constants, variables, predicates, functions, quantifiers, connectives. Resolution proofs: Apply CNF conversion and resolution steps to derive conclusions."
+      },
+      {
+        "type": "15-marks",
+        "question": "Describe the resolution in FOL and explain the steps for resolution.",
+        "answer": "Steps: Convert to CNF, standardize variables, negate goal, apply unification and resolution iteratively until empty clause is derived, proving the goal."
+      }
+    ]
+  },
+  "unit5": {
+    "unit_name": "Probabilistic Reasoning",
+    "questions": [
+      {
+        "type": "2-marks",
+        "question": "Define Bayes theorem.",
+        "answer": "Bayes theorem relates conditional probabilities: P(A|B) = P(B|A) * P(A) / P(B)."
+      },
+      {
+        "type": "2-marks",
+        "question": "List down the applications of Bayesian network.",
+        "answer": "Applications include medical diagnosis, risk analysis, decision support systems, and machine learning."
+      },
+      {
+        "type": "2-marks",
+        "question": "When the joint probability is required?",
+        "answer": "Joint probability is required to find the likelihood of multiple events occurring together."
+      },
+      {
+        "type": "2-marks",
+        "question": "When the leak nodes are generated in the conditional distribution?",
+        "answer": "Leak nodes account for unknown causes in Bayesian networks when conditional probabilities do not sum to one."
+      },
+      {
+        "type": "2-marks",
+        "question": "Define random variable and its types.",
+        "answer": "Random variable is a variable whose values are outcomes of a random process. Types: Discrete and Continuous."
+      },
+      {
+        "type": "2-marks",
+        "question": "Differentiate conditional and unconditional probability.",
+        "answer": "Conditional probability depends on a given event, P(A|B); unconditional probability is the overall probability, P(A)."
+      },
+      {
+        "type": "2-marks",
+        "question": "Give the Bayes rule equation.",
+        "answer": "P(H|E) = P(E|H)P(H)/P(E)."
+      },
+      {
+        "type": "2-marks",
+        "question": "List the different models in probabilistic reasoning.",
+        "answer": "Models: Bayesian networks, Markov models, Hidden Markov Models, Kalman filters, Decision networks."
+      },
+      {
+        "type": "2-marks",
+        "question": "Define fuzzy reasoning.",
+        "answer": "Fuzzy reasoning handles uncertainty by using degrees of truth rather than binary true/false values."
+      },
+      {
+        "type": "2-marks",
+        "question": "Define the term decision theory.",
+        "answer": "Decision theory is the study of principles and models for making rational choices under uncertainty."
+      },
+      {
+        "type": "13-marks",
+        "question": "How the uncertainty issues are generated in the real world?",
+        "answer": "Uncertainty arises due to incomplete knowledge, sensor errors, probabilistic events, and environmental complexity."
+      },
+      {
+        "type": "13-marks",
+        "question": "Discuss about Bayesian theory and Bayesian network.",
+        "answer": "Bayesian theory uses probability to reason under uncertainty. Bayesian networks model probabilistic dependencies among variables to perform inference."
+      },
+      {
+        "type": "13-marks",
+        "question": "Explain the semantics of Bayesian network with example in detail.",
+        "answer": "Semantics: Nodes represent variables, edges represent dependencies, and conditional probability tables quantify relations. Example: Medical diagnosis network representing symptoms and diseases."
+      },
+      {
+        "type": "13-marks",
+        "question": "How to represent knowledge in an uncertain domain?",
+        "answer": "Knowledge can be represented using Bayesian networks, probability distributions, and fuzzy logic to handle uncertainty."
+      },
+      {
+        "type": "13-marks",
+        "question": "How the uncertainty issues are generated in the real world?",
+        "answer": "See previous explanation: incomplete information, probabilistic events, sensor noise, and dynamic environment."
+      },
+      {
+        "type": "13-marks",
+        "question": "Explain how Bayesian statistics provides reasoning under various kinds of uncertainty.",
+        "answer": "Bayesian statistics combines prior knowledge with observed data to update beliefs and make probabilistic predictions."
+      },
+      {
+        "type": "15-marks",
+        "question": "Write the enumeration algorithm for answering queries on Bayesian networks.",
+        "answer": "The enumeration algorithm sums over all possible values of hidden variables to compute the posterior probability of the query given evidence."
+      },
+      {
+        "type": "15-marks",
+        "question": "Describe a method for constructing Bayesian networks.",
+        "answer": "Construct nodes for variables, determine dependency structure with directed edges, define conditional probability tables, validate with domain knowledge or data."
+      },
+      {
+        "type": "15-marks",
+        "question": "Explain about the exact inference in Bayesian networks.",
+        "answer": "Exact inference computes precise posterior probabilities using methods like variable elimination or junction tree algorithms."
+      },
+      {
+        "type": "15-marks",
+        "question": "Define the terms: i) Query variable, ii) Evidence variable, iii) Hidden variable. Explain causal networks.",
+        "answer": "Query variable: variable of interest, Evidence variable: observed variable, Hidden variable: unobserved variable. Causal networks represent cause-effect relationships among variables using directed edges."
+      }
+    ]
+  }
+}
